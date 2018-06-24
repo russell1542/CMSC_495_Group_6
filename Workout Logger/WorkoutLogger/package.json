@@ -1,0 +1,8 @@
+{
+    "name": "WorkoutLogger",
+    "version": "1.0.0",
+    "keywords": ["util", "functional", "server", "client", "browser"],
+    "author": "russell3233",
+    "contributors": [],
+    "dependencies": {}
+}
