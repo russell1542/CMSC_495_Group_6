@@ -17,30 +17,60 @@ Login Page
 -->
 <html>
     <head>
-        <!-- CARA IS WORKING ON DESIGN
-        REPLACE HEADER AND FOOTER
-        -->
-    <form>
+        <meta charset="utf-8">
+        <!-- The following provides a description for the website -->
+        <meta name="description" content="Free Web tutorials">
+        <!-- The following defines keywords for websites -->
+        <meta name="keywords" content="HTML, CSS, XML, JavaScript">
+        <!-- The following automatically sets the viewport for all devices -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <div class="container">
-            <label for="userName"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="userName" required>
-        </div>
+        <title>Workout Logs</title>  
 
-        <div class="containter">
-            <label for="password"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>        
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-        </div>
+        <link  href="\Styles\Styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>Login</h1>
+        </header>
 
-        <div class="container" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit">Login</button>
-            <!-- FUTURE FEATURE
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            -->
-        </div>
-    </form>
+        <section>
+            <aside>
+                <nav>
+                    <ul>
+                        <form>
+                            <div class="container">
+                                <label for="userName"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="userName" required>
+                            </div>
+
+                            <div class="containter">
+                                <label for="password"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="password" required>        
+                                <!-- TODO
+                                <label>
+                                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                                </label>
+                                -->
+                            </div>
+
+                            <div class="container" style="background-color:#f1f1f1">
+                                <button type="button" class="cancelbtn">Cancel</button>
+                                <button type="submit">Login</button>
+                                <!-- TODO
+                                    <span class="psw">Forgot <a href="#">password?</a></span>
+                                -->
+                            </div>
+                        </form>
+                    </ul>
+                </nav>
+            </aside>
+        </section>
+
+        <footer>
+            <p>
+                <li><a href="./workoutlog.php">Workout Log Homepage</a></li>
+            </p>
+        </footer>
+    </body>
 </html>
