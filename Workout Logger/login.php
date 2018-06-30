@@ -1,30 +1,40 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-?>
-
-
-<!DOCTYPE html>
 <!--
 Russell Lilljedahl
 CMSC 495 Group 6
 24 Jun 2018
 Login Page
 -->
+
+<?php
+    include("config.php");
+    session_start();
+    
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+        $username = mysqli_real_escape_string($db, $_POST['userName']);
+        $userPassword = mysqli_real_escape_string($db, $_POST['password']);
+
+        $sql = "SELECT id FROM admin WHERE username = '$username'"
+                . " and passcode = '$userPassword'";
+        $result = mysqli_query($db,$sql);
+        $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+        $active = $row['active'];
+        
+        $count = mysqli_num_rows($result);
+        
+        if($count == 1) {
+            session_register("myusername");
+            $_SESSION['login_user'] = $myusername;
+
+            header("location: workoutlog.php");
+        }else {
+            $error = "Your Login Name or Password is invalid";
+        }
+    }
+?>
+
+<!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <!-- The following provides a description for the website -->
-        <meta name="description" content="Free Web tutorials">
-        <!-- The following defines keywords for websites -->
-        <meta name="keywords" content="HTML, CSS, XML, JavaScript">
-        <!-- The following automatically sets the viewport for all devices -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <title>Workout Logs</title>  
 
         <link  href="\Styles\Styles.css" rel="stylesheet" type="text/css">
@@ -41,12 +51,12 @@ Login Page
                         <form>
                             <div class="container">
                                 <label for="userName"><b>Username</b></label>
-                                <input type="text" placeholder="Enter Username" name="userName" required>
+                                <input type="text" placeholder="Enter Username" name="userName" required </input>
                             </div>
 
-                            <div class="containter">
+                            <div class="container">
                                 <label for="password"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="password" required>        
+                                <input type="password" placeholder="Enter Password" name="password" required </input>        
                                 <!-- TODO
                                 <label>
                                     <input type="checkbox" checked="checked" name="remember"> Remember me
