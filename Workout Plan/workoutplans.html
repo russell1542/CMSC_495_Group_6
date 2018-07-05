@@ -10,12 +10,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <title>Workout Plans</title>		
-		
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link  href="Styles\Styles.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+		<script>
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 20) {
+			        document.getElementById("myBtn").style.display = "block";
+			    } else {
+			        document.getElementById("myBtn").style.display = "none";
+			    }
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+			    document.body.scrollTop = 0;
+			    document.documentElement.scrollTop = 0;
+			}
+		</script>
 		<header>
-			<h1>Workout Plans</h1>
+			<img src="Styles\FirstClassBodyLogo.png" alt="First Class Body Logo" style="height:200px;">
 		</header>
 
 		<section>
@@ -23,6 +43,7 @@
 			  <nav>
 			    <ul>
 			        <div>
+			        	<li><a href="#" class="active"><i class="fa fa-home"></i> Home</a></li>
 			            <li><a href="workoutplans.html">Workout Plans</a></li>
 			            <li><a href="gainweight.html">Gain Weight</a></li>
 			            <li><a href="loseweight.html">Lose Weight</a></li>
@@ -33,12 +54,21 @@
 			</aside>
 			
 			<article>
-				<h2>Welcome to TITLE!</h2>
-				<h2>Workout Plans:</h2>
+				<h2><strong>Welcome to our workout plans!</strong></h2>
 				<p>Our goal is to provide three simple plans for individuals who know they want to live healthier lifestyles but don't know how to get started. If this sounds like it describes you then take a look at our workout plans. We offer a plans that cover the most common interests when trying to live healthier: Lose Weight, Gain Weight, and Get Toned. Pick one of these three options and start living healthier today!</p>
-				<h2>Workout Log:</h2>
-				<p>On top of the three plans that we provide for you to follow, we also provide a workout log for you to keep track of all the progress you will make on the journey to becoming a happier you! Check out our Workout Log page and create your account today!</p>
+				<h3>Workout Log:</h3>
+				<p>Not only do we have our three plans that we provide, but we also provide a workout log for you to keep track of all the progress you will make on the journey to becoming a happier and healthier you! Check out our Workout Log page and create your account today!</p>
 				<a href="#">Click here to create an account!</a>
+				<br/>
+				<br/>
+				<hr/>
+				<div class="ref">
+					<h3>References:</h3>
+					<p><a href="https://www.bodybuilding.com/fun/beginner_muscle_gain_program.htm">https://www.bodybuilding.com/fun/beginner_muscle_gain_program.htm</a></p>
+					<p><a href="https://www.bodybuilding.com/fun/beginner_fat_loss_program.htm">https://www.bodybuilding.com/fun/beginner_fat_loss_program.htm</a></p>
+					<p><a href="https://www.muscleandfitness.com/training/build-muscle/dumbbell-workout">https://www.muscleandfitness.com/training/build-muscle/dumbbell-workout</a></p>
+					<p><a href="https://www.nerdfitness.com/blog/strength-training-101-how-much-weight-should-i-be-lifting/">https://www.nerdfitness.com/blog/strength-training-101-how-much-weight-should-i-be-lifting/</a></p>
+				</div>
 			</article>
 		</section>
 		
