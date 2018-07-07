@@ -6,7 +6,7 @@ Test if user is logged in, else redirect to login page
 -->
 
 <?php
-    include('config.php');
+    include('dbconfig.php');
     session_start();
 
     $user_check = $_SESSION['login_user'];
