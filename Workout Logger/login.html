@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <title>Workout Logs</title>  
-
-        <link  href="\Styles\Styles.css" rel="stylesheet" type="text/css">
-    </head>
-    <!--<body onload="document.main.username.focus();-->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link  href="Styles\Styles.css" rel="stylesheet" type="text/css">
+    </head>    <!--<body onload="document.main.username.focus();-->
     <body>
         <header>
-            <h1>Login</h1>
+            <img src="Styles\FirstClassBodyLogo.png" alt="First Class Body Logo" style="height:200px;">
         </header>
 
         <section>
             <aside>
                 <nav>
                     <ul>
-                        <form name = "main" method = "post" action = login.php>>
+                        <li><a href="index.html" class="active"><i class="fa fa-home"></i> Home</a></li>
+                        <br><br><br>
+                        <form name = "main" method = "post" action = login.php>
                             <label for="userName"><b>Username</b></label>
                             <input type="text" placeholder="Enter Username" name="username" required </input>
                             <br>
@@ -40,8 +46,7 @@
         </section>
 
         <footer>
-            <p>
-            </p>
+            <p>Current Trends and Projects in Computer Science - Group 6 - 2018</p>
         </footer>
     </body>
 </html>
