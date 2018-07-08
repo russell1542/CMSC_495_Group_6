@@ -18,7 +18,7 @@
             <aside>
                 <nav>
                     <ul>
-                        <form name = "main" method = "post" action = Authenticate.php>
+                        <form name = "main" method = "post" action = Authenticate.php>>
                             <label for="userName"><b>Username</b></label>
                             <input type="text" placeholder="Enter Username" name="username" required </input>
                             <br>

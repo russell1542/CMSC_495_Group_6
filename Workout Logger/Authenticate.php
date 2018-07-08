@@ -14,12 +14,8 @@
     $query->execute();
     $result =$query->get_result();
     if ($result ->num_rows ===1) {
-        echo "Welcome";
-        secure_session_start();
-        $_SESSION['username'] = sanitized_username;
-        header("location:workoutlog.php");
+        header("location:welcome.php");
     } else {
-        echo "Wrong Username or Password"; 
         header("location:login.php");
     }
 
