@@ -1,74 +1,23 @@
 <?php
+
+    $const = include("dbconfig.php");
+    // replace with user login
+    $conn = new mysqli($const['localhost'], $const['rlill'], $const['test1234'],$const['database']) or die("Connect failed: %s\n". $conn -> error);
+    // Check connection
+    if($mysqli === false){
+        die("ERROR: Could not connect. " . $mysqli->connect_error);
+    }    
+    
+    // insert into table
+    $sql = "INSERT INTO workout_table (exercise_name, workout_date, 
+            . reps, weight, sets, notes) 
+            VALUES
+            (exerciseName, workoutDate, exerciseReps , 
+            exerciseWeight, exerciseSets, notes)";
+    header("location:dataSubmitted.html"); // if pressed, return to workout log page
+    
+    //TODO
+    // add other funcitons as necessary
+    // delete, change, etc.
+
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Workout Logs</title>  
-
-        <link  href="\Styles\Styles.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <header>
-            <h1>New Entry</h1>
-        </header>
-
-        <section>
-            <aside>
-                <nav>
-                    <ul>
-                        <div>
-                            <li><a href="workoutlog.php">Workout Log Homepage</a></li>
-                            <li><a href="history.php">History</a></li>
-                        </div>
-                    </ul>
-                </nav>
-            </aside>
-
-            <article>
-                <h2>Welcome!</h2>
-                <p>
-                    Keep track of all your workouts!!!<br>
-                    Use the form below to enter a new workout into the database.<br>
-                </p>
-            </article>
-        </section>
-        
-        <section>
-            <aside>
-                <nav>
-                    <ul>
-                        <form name ="main" method ="post" action=tableAlteration.php>
-                            <div class="container">
-                                <label for="workoutDate"><b>Workout date</b></label>
-                                <input type="text" placeholder="Enter Workout Date" name="workoutDate" required <br></input>
-                            </div>
-                            <div class="exContainer">
-                                <label for="exerciseName"><b>Exercise name</b></label>
-                                <input type="text" placeholder="Enter Exercise Name" name="exerciseName" required </input>
-                                <label for="exerciseSets"><b>Number of sets</b></label>
-                                <input type="text" placeholder="Enter number of sets" name="exerciseSets" required </input>
-                                <label for="exerciseWeight"><b>Weight</b></label>
-                                <input type="text" placeholder="Enter weight" name="exerciseWeight" required </input>
-                                <label for="exerciseReps"><b>Reps</b></label>
-                                <input type="text" placeholder="Enter reps" name="exerciseReps" required <br></input>
-                            </div>
-                            <div class="container">
-                                <label for="notes"><b>Workout notes</b></label>
-                                <input type="text" placeholder="Enter notes" name="notes" required </input>
-                            </div>
-                            <div>
-                                <!--<input type="submit" name="btn_submit" value="Cancel"/>-->
-                                <button type="submit" class="submitbtn">Submit</button>
-                            </div>
-                        </form>
-                    </ul>
-                </nav>
-            </aside>
-            
-        </section>
-
-        <footer>
-            <p>This is the footer of the page</p>
-        </footer>
-    </body>
-</html>
