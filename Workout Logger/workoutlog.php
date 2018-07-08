@@ -1,12 +1,5 @@
-<!--
-Russell Lilljedahl
-CMSC 495 Group 6
-24 Jun 2018
-Workout log home page
--->
-
 <?php
-    include 'session.php'; // cannot get to this page without being logged in
+    //include 'session.php'; // cannot get to this page without being logged in
 ?>
 
 <!DOCTYPE html>

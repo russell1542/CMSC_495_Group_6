@@ -9,7 +9,7 @@ config connection to database
 return array(
     'host' => 'localhost',
     'username' => 'root',
-    'password' => 'mpage',
-    'database' => 'cmsc495'
+    'password' => '',
+    'database' => 'cmsc_495'
     );
 ?>
