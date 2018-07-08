@@ -1,10 +1,7 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
     position: relative;
     min-height: 100%;
+    width: auto;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: #c6ffe2;
@@ -45,15 +42,16 @@ header {
 nav {
   overflow: hidden;
   background-color: #333;
+  padding-left: 55px;
 }
 
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: 0px;
 }
 
 /* Settings for the Menu */
-li a {
+li a{
     float: left;
     display: block;
     color: #f2f2f2;
@@ -77,8 +75,9 @@ li a.active {
 /* This is what aligns the body text of the page */
 article {
     float: left;
-    padding: 20px 20px 100px 50px;
-    width: 75%;
+    display: block;
+    padding: 20px 20px 50px 100px;
+    width: 85%;
 }
 
 hr {
@@ -98,6 +97,51 @@ section:after {
     position:absolute;
 }
 
+.image{
+    height: 250px;
+    width: 395px;
+    position: center;
+}
+
+.container{
+    float: left;
+    position: relative;
+    width: 395px;
+    margin: 0px 20px 50px;
+}
+
+.overlay{
+    position: absolute;
+    top: 56px;
+    bottom: 0;
+    left:0;
+    right:0;
+    height: 250px;
+    width: 395px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #ffaa00;
+}
+
+.container:hover .overlay{
+    opacity:1;
+}
+
+.text{
+    color: #000000;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.ref{
+    padding-bottom: 50px;
+}
+
 /* Style the footer */
 footer {
     clear: left;
@@ -106,7 +150,7 @@ footer {
     bottom:0;
     width:100%;
     background-color: #333;
-    padding: 2px 40px;
+    padding: 2px 95px;
     font-size: 17px;
     color: white;
     height: 60px;
@@ -114,7 +158,7 @@ footer {
 
 /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
-    nav, article {
+    nav, article{
         width: 100%;
         height: auto;
     }
