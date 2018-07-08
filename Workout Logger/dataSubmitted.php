@@ -8,7 +8,7 @@
    </head>
    
    <body>
-      <h1>Welcome</h1> 
+      <h1>Data submitted</h1> 
       <h2><a href = "workoutlog.php">Workout Log Homepage</a></h2>
    </body>
    

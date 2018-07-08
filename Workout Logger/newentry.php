@@ -1,5 +1,5 @@
-
-
+<?php
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -57,8 +57,8 @@
                                 <input type="text" placeholder="Enter notes" name="notes" required </input>
                             </div>
                             <div>
-                                <button type="button" class="cancelbtn">Cancel</button>
-                                <button type="button" class="submitbtn">Submit</button>
+                                <!--<input type="submit" name="btn_submit" value="Cancel"/>-->
+                                <button type="submit" class="submitbtn">Submit</button>
                             </div>
                         </form>
                     </ul>

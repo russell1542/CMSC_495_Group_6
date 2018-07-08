@@ -1,22 +1,20 @@
 <?php
 
-    if($_POST['cancel']) {
-        echo "CANCELLED";
-        header("location:welcome.php");
-    }
+    $const = include("dbconfig.php");
+    // replace with user login
+    $conn = new mysqli($const['localhost'], $const['rlill'], $const['test1234'],$const['database']) or die("Connect failed: %s\n". $conn -> error);
+    // Check connection
+    if($mysqli === false){
+        die("ERROR: Could not connect. " . $mysqli->connect_error);
+    }    
     
-    if($_POST['submit']) {
-        echo "Submitted";
-        header("location:welcome.php");
-    }
-
     // insert into table
     $sql = "INSERT INTO workout_table (exercise_name, workout_date, 
             . reps, weight, sets, notes) 
             VALUES
             (exerciseName, workoutDate, exerciseReps , 
             exerciseWeight, exerciseSets, notes)";
-    header("location:workoutlog.php"); // if cancel is pressed, return to workout log page
+    header("location:dataSubmitted.php"); // if pressed, return to workout log page
     
     //TODO
     // add other funcitons as necessary
