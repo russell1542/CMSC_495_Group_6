@@ -74,10 +74,31 @@ li a.active {
 
 /* This is what aligns the body text of the page */
 article {
-    float: left;
-    display: block;
-    padding: 20px 20px 50px 100px;
-    width: 85%;
+  float: left;
+  display: block;
+  padding: 20px 20px 50px 100px;
+  width: 85%;
+}
+
+form{
+  float: left;
+  width: 200px;
+}
+
+.field{
+  margin-bottom: 20px;
+}
+
+.entry_submit{
+  margin-bottom: 50px;
+}
+
+button{
+  margin-bottom: 20px;
+}
+
+.login_box{
+  width: 100px;
 }
 
 hr {

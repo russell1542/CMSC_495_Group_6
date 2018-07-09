@@ -1,5 +1,68 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Workout Logs</title>  
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link  href="Styles\Styles.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+		<script>
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			    if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 20) {
+			        document.getElementById("myBtn").style.display = "block";
+			    } else {
+			        document.getElementById("myBtn").style.display = "none";
+			    }
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+			    document.body.scrollTop = 0;
+			    document.documentElement.scrollTop = 0;
+			}
+		</script>
+		<header>
+			<img src="Styles\FirstClassBodyLogo.png" alt="First Class Body Logo" style="height:200px;">
+		</header>
+
+        <section>
+            <aside>
+                <nav>
+                    <ul>
+                    	<li><a href="index.html" class="active"><i class="fa fa-home"></i> Home</a></li>
+                        <li><a href="newentry.html">New Entry</a></li>
+                        <li><a href="history.php">History</a></li>
+                        <li><a href="logout.php">Logout</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <article>
+                <h2>Thank you for making a submission!</h2>
+                <p>Feel free to make another entry!</p>
+            </article>
+        </section>
+
+        <footer>
+            <p>Current Trends and Projects in Computer Science - Group 6 - 2018</p>
+        </footer>
+    </body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
    
    <head>
       <title>Workout Logs</title>
@@ -10,4 +73,4 @@
       <h2><a href = "workoutlog.html">Workout Log Homepage</a></h2>
    </body>
    
-</html>
+</html> -->
