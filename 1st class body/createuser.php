@@ -58,7 +58,7 @@
             echo "<p></p>";
             ?>
             <h5>Complete the information in the form below and click Submit to create your account. All fields are required.</h5>
-            <form name="createuser" method="POST" action="createNewUser.php">	
+            <form name="createuser" method="POST" action="createuser.php">	
                 <table border="1" width="100%" cellpadding="0" id="mylogin">			
                     <tr>
                         <td width="157">Firstname:</td>
