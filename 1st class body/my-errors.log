@@ -1,3 +1,0 @@
-successful connection
-INSERT INTO workout_table (user_id, workout_date, exercise_name, sets, weight, reps, notes) 
-                            VALUES ( , 1212-12-12, name, 1, 2, 3, some notes)
