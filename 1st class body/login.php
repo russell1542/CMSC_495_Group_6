@@ -1,5 +1,5 @@
 <?php
-    
+
     $const = include("dbconfig.php");
 
     $conn = new mysqli($const['localhost'], $const['username'], $const['password'],$const['database']) or die("Connect failed: %s\n". $conn -> error);
@@ -16,7 +16,7 @@
     $result =$query->get_result();
     if ($result ->num_rows ===1) {
         session_start();
-        header("location:welcome.php");
+        header("location:workoutlog.html");
     } else {
         header("location:login.html");
     }

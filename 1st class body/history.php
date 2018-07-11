@@ -15,16 +15,36 @@
         <link  href="Styles\Styles.css" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <script>
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
         <header>
-            <h1>History</h1>
+            <img src="Styles\FirstClassBodyLogo.png" alt="First Class Body Logo" style="height:200px;">
         </header>
 
         <section>
             <aside>
                 <nav>
                     <ul>
+                        <li><a href="index.html" class="active"><i class="fa fa-home"></i> Home</a></li>
                         <li><a href="newentry.html">New Entry</a></li>
-                        <li><a href="workoutlog.html">Workout Log Homepage</a></li>
+                        <li><a href="workoutlog.html">Workout Log</a></li>
                         <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </nav>

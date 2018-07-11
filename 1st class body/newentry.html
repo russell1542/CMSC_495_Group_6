@@ -2,9 +2,14 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <!-- The following provides a description for the website -->
+        <meta name="description" content="Free Web tutorials">
+        <!-- The following defines keywords for websites -->
+        <meta name="keywords" content="HTML, CSS, XML, JavaScript">
+        <!-- The following automatically sets the viewport for all devices -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>Workout Logs</title>  
+        <title>Workout Log</title>        
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link  href="Styles\Styles.css" rel="stylesheet" type="text/css">
@@ -53,34 +58,34 @@
                     Keep track of all your workouts!!!
                     Use the blocks below to enter a new workout into the database.
                 </p>
-                <form name ="main" method ="post" action="newentry.php">
+                <form name ="main" method ="get" action="newentry.php">
                     <div class="field">
                         <label for="workoutDate"><b>Workout date</b></label>
-                        <input type="text" placeholder="Enter Workout Date" name="workoutDate" required </input>
+                        <input type="text" placeholder="Enter Workout Date" name="workoutDate" required />
                     </div>
                     <div class="field">
                         <label for="exerciseName"><b>Exercise name</b></label>
-                        <input type="text" placeholder="Enter Exercise Name" name="exerciseName" required </input>
+                        <input type="text" placeholder="Enter Exercise Name" name="exerciseName" required />
                     </div>
                     <div class="field">
                         <label for="exerciseSets"><b>Number of sets</b></label>
-                        <input type="text" placeholder="Enter number of sets" name="exerciseSets" required </input>
+                        <input type="text" placeholder="Enter number of sets" name="exerciseSets" required />
                     </div>
                     <div class="field">
                         <label for="exerciseWeight"><b>Weight</b></label>
-                        <input type="text" placeholder="Enter weight" name="exerciseWeight" required </input>
+                        <input type="text" placeholder="Enter weight" name="exerciseWeight" required />
                     </div>
                     <div class="field">
                         <label for="exerciseReps"><b>Reps</b></label>
-                        <input type="text" placeholder="Enter reps" name="exerciseReps" required </input>
+                        <input type="text" placeholder="Enter reps" name="exerciseReps" required />
                     </div>
                     <div class="field">
                         <label for="notes"><b>Workout notes</b></label>
-                        <input type="text" placeholder="Enter notes" name="notes" required </input>
+                        <input type="text" placeholder="Enter notes" name="notes" required />
                     </div>
                     <div class="entry_submit">
                         <!--<input type="submit" name="btn_submit" value="Cancel"/>-->
-                        <button type="submit" class="submitbtn">Submit</button>
+                        <button type="submit" name="submit" class="submitbtn">Submit</button>
                     </div>
                 </form>
             </article>

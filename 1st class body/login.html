@@ -46,7 +46,7 @@
             <article>
                 <h2><strong>Please login or create a new account</strong></h2>
                 <div class="login_box">    
-                    <form name = "main" method = "post" action = "login.php">
+                    <form name = "main" method = "post" action = "workoutlog.html">
                         <div class="field">
                             <label for="userName"><b>Username</b></label>
                             <input type="text" placeholder="Enter Username" name="username" required </input>
@@ -54,17 +54,9 @@
                         <div class="field">
                             <label for="password"><b>Password</b></label>
                             <input type="password" placeholder="Enter Password" name="password" required </input>
-                        </div>        
-                        <!-- TODO
-                        <label>
-                            <input type="checkbox" checked="checked" name="remember"> Remember me
-                        </label>
-                        -->
+                        </div>
                         <button type="button" >Cancel</button>
                         <button type="submit" >Login</button>
-                        <!-- TODO
-                            <span class="psw">Forgot <a href="#">password?</a></span>
-                        -->
                     </form>
                     <form name = "main" method = "post" action = "createuser.php">
                         <button type="submit" >Create New User</button>
